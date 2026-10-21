@@ -19,7 +19,11 @@ app.use(cors({
   origin: (origin, callback) => {
     // allow requests with no origin (e.g. mobile apps, curl, server-to-server)
     if (!origin) return callback(null, true);
-    if (allowedOrigins.includes(origin) || origin.endsWith('.betterself.pk')) {
+    if (
+      allowedOrigins.includes(origin) ||
+      origin.endsWith('.betterself.pk') ||
+      origin.endsWith('.vercel.app')
+    ) {
       return callback(null, true);
     }
     // Allow any localhost origin in development
@@ -72,8 +76,8 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Start listening if run directly
-if (process.env.NODE_ENV !== 'test') {
+// Start listening if run directly (standalone Node.js server)
+if (process.env.NODE_ENV !== 'test' && !process.env.VERCEL) {
   app.listen(PORT, () => {
     console.log(`=======================================================`);
     console.log(` BetterSelf LMS Backend Server listening on port ${PORT}`);
