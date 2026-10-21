@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "BetterSelf LMS - Self-Paced Wellness & Psychoeducation Portal",
   "private": true,
+  "type": "module",
   "scripts": {
+    "start": "node start-production.js",
+    "build": "npm --prefix frontend run build",
     "dev:backend": "npm --prefix backend run dev",
     "dev:frontend": "npm --prefix frontend run dev",
     "seed": "npm --prefix backend run seed",
