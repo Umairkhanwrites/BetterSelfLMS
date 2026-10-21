@@ -1,0 +1,16 @@
+{
+  "name": "betterself-lms",
+  "version": "1.0.0",
+  "description": "BetterSelf LMS - Self-Paced Wellness & Psychoeducation Portal",
+  "private": true,
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "seed": "npm --prefix backend run seed",
+    "test:m1": "npm --prefix backend run test:m1",
+    "test:m2": "npm --prefix backend run test:m2",
+    "test:m3": "npm --prefix backend run test:m3",
+    "test:m4": "npm --prefix backend run test:m4",
+    "test:all": "npm --prefix backend run test:all"
+  }
+}

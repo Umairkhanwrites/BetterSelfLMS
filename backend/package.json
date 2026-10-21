@@ -1,0 +1,25 @@
+{
+  "name": "betterself-lms-backend",
+  "version": "1.0.0",
+  "description": "BetterSelf LMS Backend API - Node.js + Express + Firebase",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node src/scripts/seed.js",
+    "test:m1": "node src/scripts/verify-m1.js",
+    "test:m2": "node src/scripts/verify-m2.js",
+    "test:m3": "node src/scripts/verify-m3.js",
+    "test:m4": "node src/scripts/verify-m4.js",
+    "test:all": "node src/scripts/verify-m1.js && node src/scripts/verify-m2.js && node src/scripts/verify-m3.js && node src/scripts/verify-m4.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "firebase-admin": "^12.6.0",
+    "pdf-lib": "^1.17.1",
+    "qrcode": "^1.5.4"
+  }
+}
