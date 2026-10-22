@@ -794,7 +794,7 @@ export default function AdminCommandCenter() {
   return (
     <div className="min-h-screen bg-slate-100 pb-24">
       {/* Top Header (Logo Blue Foundation) */}
-      <section className="bg-gradient-to-r from-[#102a3f] via-[#1d4666] to-[#102a3f] text-white pt-10 pb-8 px-4 sm:px-6 lg:px-8 border-b border-[#3B97D3]/40">
+      <section className="bg-gradient-to-r from-[#102a3f] via-[#1d4666] to-[#102a3f] text-white pt-10 pb-8 px-4 sm:px-6 lg:px-8 border-b border-[#2988C6]/40">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-start gap-4">
             <BrandMark className="w-12 h-10 mt-1 shrink-0" />
@@ -819,7 +819,7 @@ export default function AdminCommandCenter() {
             </div>
             <div className="px-4 py-2 rounded-xl bg-white/10 backdrop-blur border border-white/15 text-center">
               <p className="text-[10px] text-slate-300 uppercase font-semibold">Total Revenue</p>
-              <p className="text-xl font-black text-[#7CC157]">PKR {stats?.totalRevenuePKR?.toLocaleString() || 0}</p>
+              <p className="text-xl font-black text-[#66B151]">PKR {stats?.totalRevenuePKR?.toLocaleString() || 0}</p>
             </div>
           </div>
         </div>
@@ -833,11 +833,11 @@ export default function AdminCommandCenter() {
               onClick={() => setActiveTab('overview')}
               className={`py-4 px-3 sm:px-4 text-xs font-bold border-b-2 flex items-center gap-2 transition-all shrink-0 ${
                 activeTab === 'overview'
-                  ? 'border-[#3B97D3] text-[#206394] bg-[#ddedf8]/50'
+                  ? 'border-[#2988C6] text-[#206394] bg-[#ddedf8]/50'
                   : 'border-transparent text-slate-500 hover:text-slate-800'
               }`}
             >
-              <BarChart3 className="w-4 h-4 text-[#3B97D3]" />
+              <BarChart3 className="w-4 h-4 text-[#2988C6]" />
               Overview & Analytics
             </button>
 
@@ -845,11 +845,11 @@ export default function AdminCommandCenter() {
               onClick={() => setActiveTab('queue')}
               className={`py-4 px-3 sm:px-4 text-xs font-bold border-b-2 flex items-center gap-2 transition-all shrink-0 ${
                 activeTab === 'queue'
-                  ? 'border-[#3B97D3] text-[#206394] bg-[#ddedf8]/50'
+                  ? 'border-[#2988C6] text-[#206394] bg-[#ddedf8]/50'
                   : 'border-transparent text-slate-500 hover:text-slate-800'
               }`}
             >
-              <CreditCard className="w-4 h-4 text-[#3B97D3]" />
+              <CreditCard className="w-4 h-4 text-[#2988C6]" />
               Payment Verification Queue
               {Boolean(stats?.pendingApprovals) && (
                 <span className="px-2 py-0.5 rounded-full bg-[#F4A261] text-white text-[10px] font-extrabold animate-pulse">
@@ -862,11 +862,11 @@ export default function AdminCommandCenter() {
               onClick={() => setActiveTab('students')}
               className={`py-4 px-3 sm:px-4 text-xs font-bold border-b-2 flex items-center gap-2 transition-all shrink-0 ${
                 activeTab === 'students'
-                  ? 'border-[#3B97D3] text-[#206394] bg-[#ddedf8]/50'
+                  ? 'border-[#2988C6] text-[#206394] bg-[#ddedf8]/50'
                   : 'border-transparent text-slate-500 hover:text-slate-800'
               }`}
             >
-              <Users className="w-4 h-4 text-[#3B97D3]" />
+              <Users className="w-4 h-4 text-[#2988C6]" />
               Student Directory ({students.length})
             </button>
 
@@ -874,11 +874,11 @@ export default function AdminCommandCenter() {
               onClick={() => setActiveTab('builder')}
               className={`py-4 px-3 sm:px-4 text-xs font-bold border-b-2 flex items-center gap-2 transition-all shrink-0 ${
                 activeTab === 'builder'
-                  ? 'border-[#3B97D3] text-[#206394] bg-[#ddedf8]/50'
+                  ? 'border-[#2988C6] text-[#206394] bg-[#ddedf8]/50'
                   : 'border-transparent text-slate-500 hover:text-slate-800'
               }`}
             >
-              <Plus className="w-4 h-4 text-[#3B97D3]" />
+              <Plus className="w-4 h-4 text-[#2988C6]" />
               Course & Curriculum CMS Studio ({adminCourses.length})
             </button>
           </div>

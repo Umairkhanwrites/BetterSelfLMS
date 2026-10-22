@@ -174,7 +174,7 @@ export default function QuizEngine({
   if (loadingQuestions) {
     return (
       <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-12 text-center space-y-3">
-        <div className="inline-block w-8 h-8 border-4 border-[#3B97D3] border-t-transparent rounded-full animate-spin" />
+        <div className="inline-block w-8 h-8 border-4 border-[#2988C6] border-t-transparent rounded-full animate-spin" />
         <p className="text-slate-600 text-xs font-bold">Loading official examination questions...</p>
       </div>
     );
@@ -186,7 +186,7 @@ export default function QuizEngine({
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-slate-100 gap-4">
         <div>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#ddedf8] text-[#206394] text-xs font-bold mb-1.5 border border-[#c1e0f3]">
-            <Sparkles className="w-3.5 h-3.5 text-[#3B97D3]" />
+            <Sparkles className="w-3.5 h-3.5 text-[#2988C6]" />
             Clinical Assessment Examination
           </div>
           <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
@@ -221,7 +221,7 @@ export default function QuizEngine({
       {result?.passed && (
         <div className="p-5 rounded-2xl bg-gradient-to-r from-[#e4f6dc] via-[#f3fbf0] to-white border border-[#ccedbc] space-y-3 animate-in fade-in duration-300">
           <div className="flex items-center gap-2.5 text-[#345326]">
-            <div className="w-8 h-8 rounded-xl bg-[#7CC157] text-white flex items-center justify-center font-bold shadow-sm">
+            <div className="w-8 h-8 rounded-xl bg-[#66B151] text-white flex items-center justify-center font-bold shadow-sm">
               <Award className="w-5 h-5" />
             </div>
             <div>
@@ -237,7 +237,7 @@ export default function QuizEngine({
               <button
                 type="button"
                 onClick={onDownloadCertificate}
-                className="px-4 py-2 rounded-xl bg-[#7CC157] hover:bg-[#6eb249] text-white text-xs font-bold flex items-center gap-1.5 shadow-sm transition-all hover:scale-[1.02]"
+                className="px-4 py-2 rounded-xl bg-[#66B151] hover:bg-[#589c44] text-white text-xs font-bold flex items-center gap-1.5 shadow-sm transition-all hover:scale-[1.02]"
               >
                 <Download className="w-4 h-4" />
                 Download Verified PDF Certificate
@@ -300,7 +300,7 @@ export default function QuizEngine({
                   <span className="shrink-0 mt-0.5">
                     {isCorrect ? (
                       <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#e4f6dc] text-[#345326] text-xs font-bold">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#7CC157]" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#66B151]" />
                         Correct
                       </span>
                     ) : (
@@ -317,18 +317,18 @@ export default function QuizEngine({
               <div className="space-y-2.5 mt-3">
                 {q.options.map((option: string, optIdx: number) => {
                   const isSelected = selectedAnswers[qIdx] === optIdx;
-                  let optionStyle = 'border-slate-200 bg-white text-slate-700 hover:border-[#3B97D3] hover:bg-[#ddedf8]/20';
+                  let optionStyle = 'border-slate-200 bg-white text-slate-700 hover:border-[#2988C6] hover:bg-[#ddedf8]/20';
 
                   if (isReviewed) {
                     if (optIdx === q.correctOptionIndex) {
-                      optionStyle = 'border-[#7CC157] bg-[#e4f6dc] text-[#345326] font-bold shadow-sm ring-1 ring-[#7CC157]';
+                      optionStyle = 'border-[#66B151] bg-[#e4f6dc] text-[#345326] font-bold shadow-sm ring-1 ring-[#66B151]';
                     } else if (isSelected && !isCorrect) {
                       optionStyle = 'border-red-400 bg-red-50 text-red-800 line-through';
                     } else {
                       optionStyle = 'border-slate-200 bg-slate-50 text-slate-400 opacity-60';
                     }
                   } else if (isSelected) {
-                    optionStyle = 'border-[#3B97D3] bg-[#ddedf8]/60 text-[#102a3f] font-bold shadow-sm ring-1 ring-[#3B97D3]';
+                    optionStyle = 'border-[#2988C6] bg-[#ddedf8]/60 text-[#102a3f] font-bold shadow-sm ring-1 ring-[#2988C6]';
                   }
 
                   return (
@@ -343,9 +343,9 @@ export default function QuizEngine({
                         <span
                           className={`w-6 h-6 rounded-full border flex items-center justify-center text-[11px] font-bold shrink-0 transition-colors ${
                             isReviewed && optIdx === q.correctOptionIndex
-                              ? 'bg-[#7CC157] text-white border-[#7CC157]'
+                              ? 'bg-[#66B151] text-white border-[#66B151]'
                               : isSelected
-                              ? 'bg-[#3B97D3] text-white border-[#3B97D3]'
+                              ? 'bg-[#2988C6] text-white border-[#2988C6]'
                               : 'bg-white text-slate-500 border-slate-300'
                           }`}
                         >
@@ -368,7 +368,7 @@ export default function QuizEngine({
               {isReviewed && (
                 <div className="mt-4 p-4 rounded-xl bg-white border border-[#c1e0f3] text-xs text-slate-700 space-y-1 shadow-sm">
                   <div className="flex items-center gap-1.5 font-bold text-[#206394]">
-                    <HelpCircle className="w-4 h-4 text-[#3B97D3]" />
+                    <HelpCircle className="w-4 h-4 text-[#2988C6]" />
                     <span>Clinical Rationale & Psychoeducation:</span>
                   </div>
                   <p className="text-slate-600 leading-relaxed pl-5 font-normal">
@@ -395,7 +395,7 @@ export default function QuizEngine({
             type="button"
             onClick={handleSubmit}
             disabled={submitting}
-            className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#7CC157] hover:bg-[#6eb249] text-white font-extrabold text-xs sm:text-sm shadow-md shadow-[#7CC157]/20 transition-all flex items-center justify-center gap-2 hover:scale-[1.02]"
+            className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#66B151] hover:bg-[#589c44] text-white font-extrabold text-xs sm:text-sm shadow-md shadow-[#66B151]/20 transition-all flex items-center justify-center gap-2 hover:scale-[1.02]"
           >
             {submitting ? 'Grading Answers...' : 'Submit Assessment for Clinical Grading'}
             <ArrowRight className="w-4 h-4" />
@@ -414,7 +414,7 @@ export default function QuizEngine({
             )}
             {result.passed && (
               <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#e4f6dc] text-[#345326] text-xs font-bold border border-[#ccedbc]">
-                <Check className="w-4 h-4 text-[#7CC157]" />
+                <Check className="w-4 h-4 text-[#66B151]" />
                 Assessment Finished • Score: {result.scorePercent}%
               </div>
             )}

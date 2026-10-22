@@ -138,7 +138,7 @@ export default function CheckoutDrawer({
         <div className="p-6 border-b border-slate-200 bg-slate-50 flex items-center justify-between">
           <div>
             <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#ddedf8] text-[#206394] border border-[#c1e0f3] text-[11px] font-bold mb-1">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#3B97D3]" />
+              <ShieldCheck className="w-3.5 h-3.5 text-[#2988C6]" />
               Verified Local Wallet Checkout
             </div>
             <h2 className="text-xl font-bold text-slate-900">Enrollment Checkout</h2>
@@ -175,7 +175,7 @@ export default function CheckoutDrawer({
                   onClick={() => setActiveTab(method)}
                   className={`py-2.5 px-2 rounded-xl text-xs font-bold border transition-all text-center ${
                     activeTab === method
-                      ? 'border-[#3B97D3] bg-[#3B97D3] text-white shadow-md'
+                      ? 'border-[#2988C6] bg-[#2988C6] text-white shadow-md'
                       : 'border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100'
                   }`}
                 >
@@ -234,7 +234,7 @@ export default function CheckoutDrawer({
                 placeholder="e.g. 0293847561"
                 value={transactionId}
                 onChange={(e) => setTransactionId(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-[#3B97D3] focus:ring-1 focus:ring-[#3B97D3] text-sm outline-none font-mono"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-[#2988C6] focus:ring-1 focus:ring-[#2988C6] text-sm outline-none font-mono"
               />
             </div>
 
@@ -283,7 +283,7 @@ export default function CheckoutDrawer({
             <button
               type="submit"
               disabled={submitting}
-              className="w-full py-3.5 px-4 rounded-xl bg-[#7CC157] hover:bg-[#6eb249] disabled:bg-slate-400 text-white font-extrabold text-sm shadow-lg shadow-[#7CC157]/20 transition-all flex items-center justify-center gap-2 hover:scale-[1.02]"
+              className="w-full py-3.5 px-4 rounded-xl bg-[#66B151] hover:bg-[#589c44] disabled:bg-slate-400 text-white font-extrabold text-sm shadow-lg shadow-[#66B151]/20 transition-all flex items-center justify-center gap-2 hover:scale-[1.02]"
             >
               {submitting ? (
                 <>

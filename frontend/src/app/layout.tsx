@@ -20,13 +20,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900 antialiased selection:bg-[#3B97D3] selection:text-white">
+      <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900 antialiased selection:bg-[#2988C6] selection:text-white">
         <Navbar />
         <main className="flex-1">{children}</main>
         <footer className="bg-slate-950 text-slate-400 border-t border-slate-800 text-sm py-12 mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <BrandLogo variant="dark" />
+              <BrandLogo variant="dark" showSubtitle={true} />
               <div className="h-6 w-px bg-slate-800 mx-1 hidden sm:block" />
               <span className="text-xs text-slate-500 hidden sm:inline-block">
                 Ecosystem App • Pakistan Wellness & Psychoeducation
@@ -34,7 +34,7 @@ export default function RootLayout({
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-4 text-xs text-slate-500 text-center sm:text-right">
               <span className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#7CC157]" />
+                <span className="w-2 h-2 rounded-full bg-[#66B151]" />
                 Direct JazzCash / EasyPaisa / Bank Processing
               </span>
               <span>© {new Date().getFullYear()} BetterSelf LMS. All rights reserved.</span>

@@ -9,35 +9,35 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Ecosystem App Brand Colors from Guidelines
+        // Ecosystem App Brand Colors from Monogram & Guidelines
         brand: {
           blue: {
-            DEFAULT: '#3B97D3', // Core Trust & Stability
+            DEFAULT: '#2988C6', // Monogram Blue
             50: '#f0f7fc',
             100: '#ddedf8',
             200: '#c1e0f3',
             300: '#94c9eb',
-            400: '#5faee0',
-            500: '#3B97D3',
-            600: '#277cb7',
-            700: '#206394',
-            800: '#1e547b',
-            900: '#1d4666',
+            400: '#4da0d5',
+            500: '#2988C6',
+            600: '#2072a7',
+            700: '#1b5f8b',
+            800: '#1a5074',
+            900: '#1a4461',
             950: '#102a3f',
           },
           green: {
-            DEFAULT: '#7CC157', // Growth, Renewal & Actionable Buttons
+            DEFAULT: '#66B151', // Monogram Green
             50: '#f3fbf0',
             100: '#e4f6dc',
             200: '#ccedbc',
             300: '#abdf92',
-            400: '#8acc68',
-            500: '#7CC157',
-            600: '#5ea33c',
-            700: '#487d30',
-            800: '#3c642a',
-            900: '#345326',
-            950: '#182f11',
+            400: '#7bc164',
+            500: '#66B151',
+            600: '#539b3f',
+            700: '#417a32',
+            800: '#37622b',
+            900: '#2f5226',
+            950: '#152d10',
           },
           accent: {
             DEFAULT: '#F4A261', // Action Accent (Urgency, Notifications, Alerts)

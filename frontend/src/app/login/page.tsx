@@ -85,7 +85,7 @@ export default function LoginPage() {
             <BrandLogo showText={true} />
           </Link>
           <h1 className="text-2xl font-black text-slate-900 tracking-tight">
-            {mode === 'login' ? 'Sign in to your account' : 'Create your student account'}
+            {mode === 'login' ? 'Log in to your account' : 'Create your student account'}
           </h1>
           <p className="text-xs text-slate-500 mt-1">
             Access your evidence-based CBT courses, worksheets, and clinical community
@@ -100,16 +100,16 @@ export default function LoginPage() {
               type="button"
               onClick={() => { setMode('login'); setErrorMsg(null); }}
               className={`py-2 text-xs font-bold rounded-xl transition-all ${
-                mode === 'login' ? 'bg-[#3B97D3] text-white shadow-sm' : 'text-slate-500 hover:text-slate-800'
+                mode === 'login' ? 'bg-[#2988C6] text-white shadow-sm' : 'text-slate-500 hover:text-slate-800'
               }`}
             >
-              Sign In
+              Log In
             </button>
             <button
               type="button"
               onClick={() => { setMode('register'); setErrorMsg(null); }}
               className={`py-2 text-xs font-bold rounded-xl transition-all ${
-                mode === 'register' ? 'bg-[#3B97D3] text-white shadow-sm' : 'text-slate-500 hover:text-slate-800'
+                mode === 'register' ? 'bg-[#2988C6] text-white shadow-sm' : 'text-slate-500 hover:text-slate-800'
               }`}
             >
               Register New
@@ -192,13 +192,13 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3.5 rounded-xl bg-[#7CC157] hover:bg-[#6eb249] text-white font-extrabold text-xs shadow-md shadow-[#7CC157]/20 transition-all flex items-center justify-center gap-2 hover:scale-[1.02]"
+              className="w-full py-3.5 rounded-xl bg-[#66B151] hover:bg-[#589c44] text-white font-extrabold text-xs shadow-md shadow-[#66B151]/20 transition-all flex items-center justify-center gap-2 hover:scale-[1.02]"
             >
               {loading ? (
                 <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
               ) : (
                 <>
-                  <span>{mode === 'login' ? 'Sign In & Lock Session' : 'Create Student Account'}</span>
+                  <span>{mode === 'login' ? 'Log In & Enter Classroom' : 'Create Student Account'}</span>
                   <ArrowRight className="w-4 h-4" />
                 </>
               )}
@@ -208,7 +208,7 @@ export default function LoginPage() {
           {/* Quick-Fill Credentials Card Section */}
           <div className="pt-4 border-t border-slate-100 space-y-3">
             <div className="flex items-center gap-1.5 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-              <KeyRound className="w-3.5 h-3.5 text-[#3B97D3]" />
+              <KeyRound className="w-3.5 h-3.5 text-[#2988C6]" />
               <span>Dedicated Test Accounts & Credentials:</span>
             </div>
 
@@ -216,7 +216,7 @@ export default function LoginPage() {
               {PRE_SEEDED_ACCOUNTS.map((acc, i) => (
                 <div
                   key={i}
-                  className="p-3 rounded-xl border border-slate-200 bg-slate-50 hover:border-[#3B97D3]/40 hover:bg-[#ddedf8]/20 transition-all text-xs"
+                  className="p-3 rounded-xl border border-slate-200 bg-slate-50 hover:border-[#2988C6]/40 hover:bg-[#ddedf8]/20 transition-all text-xs"
                 >
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-bold text-slate-900">{acc.role}</span>
@@ -234,9 +234,9 @@ export default function LoginPage() {
                     <button
                       type="button"
                       onClick={() => handleQuickFill(acc)}
-                      className="px-2.5 py-1 rounded-lg bg-[#7CC157] text-white font-sans font-bold text-[10px] hover:bg-[#6eb249] transition-colors"
+                      className="px-2.5 py-1 rounded-lg bg-[#66B151] text-white font-sans font-bold text-[10px] hover:bg-[#589c44] transition-colors"
                     >
-                      Use & Sign In
+                      Use & Log In
                     </button>
                   </div>
                 </div>

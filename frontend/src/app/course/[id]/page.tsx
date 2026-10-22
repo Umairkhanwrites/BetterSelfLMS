@@ -91,10 +91,10 @@ export default function CourseLandingPage() {
   return (
     <div className="min-h-screen pb-24">
       {/* Trust Header Hero (Logo Blue Foundation) */}
-      <section className="bg-gradient-to-b from-[#102a3f] via-[#1d4666] to-[#102a3f] text-white pt-14 pb-20 px-4 sm:px-6 lg:px-8 border-b border-[#3B97D3]/30">
+      <section className="bg-gradient-to-b from-[#102a3f] via-[#1d4666] to-[#102a3f] text-white pt-14 pb-20 px-4 sm:px-6 lg:px-8 border-b border-[#2988C6]/30">
         <div className="max-w-6xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#3B97D3]/20 border border-[#3B97D3]/40 text-[#ddedf8] text-xs font-semibold mb-6">
-            <Sparkles className="w-3.5 h-3.5 text-[#3B97D3]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2988C6]/20 border border-[#2988C6]/40 text-[#ddedf8] text-xs font-semibold mb-6">
+            <Sparkles className="w-3.5 h-3.5 text-[#2988C6]" />
             <span>{course.difficulty} Level Psychoeducation Track</span>
           </div>
 
@@ -108,15 +108,15 @@ export default function CourseLandingPage() {
           {/* Vitals Bar */}
           <div className="mt-8 flex flex-wrap items-center gap-6 text-xs sm:text-sm text-slate-300 py-3 px-5 rounded-2xl bg-white/5 backdrop-blur border border-white/10 w-fit">
             <span className="flex items-center gap-2 font-medium">
-              <Clock className="w-4 h-4 text-[#3B97D3]" />
+              <Clock className="w-4 h-4 text-[#2988C6]" />
               {course.totalDurationMinutes} Minutes Self-Paced
             </span>
             <span className="flex items-center gap-2 font-medium">
-              <FileText className="w-4 h-4 text-[#3B97D3]" />
+              <FileText className="w-4 h-4 text-[#2988C6]" />
               {course.totalItems} Worksheets & Quizzes
             </span>
             <span className="flex items-center gap-2 font-medium">
-              <Award className="w-4 h-4 text-[#7CC157]" />
+              <Award className="w-4 h-4 text-[#66B151]" />
               Verifiable QR Certificate
             </span>
           </div>
@@ -126,7 +126,7 @@ export default function CourseLandingPage() {
             {previewLesson && (
               <button
                 onClick={() => setPreviewVideoId(previewLesson.youtubeVideoId)}
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#7CC157] hover:bg-[#6eb249] text-white font-extrabold text-sm shadow-lg shadow-[#7CC157]/20 transition-all hover:scale-105"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#66B151] hover:bg-[#589c44] text-white font-extrabold text-sm shadow-lg shadow-[#66B151]/20 transition-all hover:scale-105"
               >
                 <PlayCircle className="w-5 h-5 text-white" />
                 Watch Free Intro Video (Lesson 1)
@@ -199,7 +199,7 @@ export default function CourseLandingPage() {
                             <div className="flex items-start gap-3">
                               <div className="mt-0.5">
                                 {isPreview ? (
-                                  <PlayCircle className="w-4 h-4 text-[#3B97D3]" />
+                                  <PlayCircle className="w-4 h-4 text-[#2988C6]" />
                                 ) : (
                                   <Lock className="w-4 h-4 text-slate-400" />
                                 )}
@@ -249,7 +249,7 @@ export default function CourseLandingPage() {
           <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
             <p className="text-xs font-bold text-[#206394] uppercase tracking-wider mb-3">Clinical Instructor</p>
             <div className="flex items-center gap-3.5 mb-3">
-              <div className="w-12 h-12 rounded-full bg-[#3B97D3] text-white flex items-center justify-center font-bold text-sm shadow-md">
+              <div className="w-12 h-12 rounded-full bg-[#2988C6] text-white flex items-center justify-center font-bold text-sm shadow-md">
                 AS
               </div>
               <div>
@@ -262,7 +262,7 @@ export default function CourseLandingPage() {
             </p>
             <div className="p-3 rounded-xl bg-[#ddedf8]/60 border border-[#c1e0f3] text-[#1d4666] text-xs space-y-1">
               <div className="flex items-center gap-1.5 font-bold text-[#206394]">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#7CC157]" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#66B151]" />
                 <span>100% Self-Paced Psychoeducation</span>
               </div>
               <p className="text-[11px] text-slate-600">Study at your own rhythm with lifetime access to all worksheets and video labs.</p>
@@ -270,7 +270,7 @@ export default function CourseLandingPage() {
           </div>
 
           {/* Sticky Checkout Box */}
-          <div className="p-6 rounded-2xl bg-gradient-to-b from-[#102a3f] to-[#1d4666] text-white shadow-xl border border-[#3B97D3]/40">
+          <div className="p-6 rounded-2xl bg-gradient-to-b from-[#102a3f] to-[#1d4666] text-white shadow-xl border border-[#2988C6]/40">
             <p className="text-xs font-bold text-[#ddedf8]">Complete Self-Paced Access</p>
             <div className="mt-2 flex items-baseline gap-2">
               <span className="text-3xl font-black">PKR {course.pricePKR.toLocaleString()}</span>
@@ -279,26 +279,26 @@ export default function CourseLandingPage() {
 
             <ul className="mt-5 space-y-2.5 text-xs text-slate-200">
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#7CC157] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#66B151] shrink-0" />
                 <span>Instant 24-hour access to Module 1 upon submission</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#7CC157] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#66B151] shrink-0" />
                 <span>All downloadable CBT worksheets & PDF labs</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#7CC157] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#66B151] shrink-0" />
                 <span>Auto-graded quizzes with clinical explanations</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#7CC157] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#66B151] shrink-0" />
                 <span>Verifiable QR-stamped completion certificate</span>
               </li>
             </ul>
 
             <button
               onClick={() => setIsCheckoutOpen(true)}
-              className="mt-6 w-full py-3.5 px-4 rounded-xl bg-[#7CC157] hover:bg-[#6eb249] text-white font-extrabold text-sm transition-all shadow-lg shadow-[#7CC157]/20 flex items-center justify-center gap-2 hover:scale-[1.02]"
+              className="mt-6 w-full py-3.5 px-4 rounded-xl bg-[#66B151] hover:bg-[#589c44] text-white font-extrabold text-sm transition-all shadow-lg shadow-[#66B151]/20 flex items-center justify-center gap-2 hover:scale-[1.02]"
             >
               <span>Instant Checkout (JazzCash / EasyPaisa)</span>
               <ArrowRight className="w-4 h-4" />
