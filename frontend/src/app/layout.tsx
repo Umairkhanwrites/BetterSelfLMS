@@ -6,6 +6,11 @@ import BrandLogo from '@/components/BrandLogo';
 export const metadata: Metadata = {
   title: 'BetterSelf LMS — Evidence-Based Psychoeducation & Wellness',
   description: 'Self-paced clinical wellness courses benchmarked against Coursera & Skillshare with local Pakistan payment flow.',
+  icons: {
+    icon: '/brand-monogram.png',
+    shortcut: '/brand-monogram.png',
+    apple: '/brand-monogram.png',
+  },
 };
 
 export default function RootLayout({

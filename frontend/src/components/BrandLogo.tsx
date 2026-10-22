@@ -10,32 +10,20 @@ interface BrandLogoProps {
   variant?: 'light' | 'dark';
 }
 
-export function BrandMark({ className = 'w-9 h-8' }: { className?: string }) {
+export function BrandMark({ className = 'w-9 h-9' }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 100 80"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      aria-label="BetterSelf Brand Mark"
-    >
-      {/* Upper Organic Blue Pebble (#3B97D3) */}
-      <path
-        d="M48 6C68 6 92 18 94 36C96 52 82 59 66 59C52 59 40 54 30 51C20 48 14 38 18 24C22 10 32 6 48 6Z"
-        fill="#3B97D3"
-      />
-      {/* Lower-left Green Leaf Pebble (#7CC157) */}
-      <path
-        d="M32 46C46 46 62 53 60 67C58 80 42 80 32 78C22 76 16 71 16 62C16 53 18 46 32 46Z"
-        fill="#7CC157"
-      />
-    </svg>
+    <img
+      src="/brand-monogram.png"
+      alt="BetterSelf Brand Mark"
+      className={`object-contain inline-block shrink-0 ${className}`}
+      loading="eager"
+    />
   );
 }
 
 export default function BrandLogo({
   className = 'flex items-center gap-2.5',
-  markClassName = 'w-9 h-8',
+  markClassName = 'w-9 h-9',
   showText = true,
   textClassName,
   variant = 'light'

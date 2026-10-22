@@ -1,5 +1,7 @@
 import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
 import QRCode from 'qrcode';
+import fs from 'fs';
+import path from 'path';
 import { db } from '../config/firebaseAdmin.js';
 
 // POST /api/learn/:courseId/certificate (verifyActive)
@@ -108,13 +110,31 @@ export const generateCertificate = async (req, res) => {
       color: rgb(0.98, 0.99, 0.99)
     });
 
+    // Embed Official BetterSelf Brand Monogram Logo
+    try {
+      const logoPath = path.resolve(process.cwd(), 'src/assets/brand-monogram.png');
+      if (fs.existsSync(logoPath)) {
+        const logoBytes = fs.readFileSync(logoPath);
+        const logoImg = await pdfDoc.embedPng(logoBytes);
+        const logoDims = logoImg.scale(0.045);
+        page.drawImage(logoImg, {
+          x: (pageWidth - logoDims.width) / 2,
+          y: 522,
+          width: logoDims.width,
+          height: logoDims.height,
+        });
+      }
+    } catch (logoErr) {
+      console.warn('Could not embed monogram logo:', logoErr.message);
+    }
+
     // Header Branding
     const brand = 'BETTERSELF LEARNING MANAGEMENT SYSTEM';
-    const brandWidth = fontBold.widthOfTextAtSize(brand, 14);
+    const brandWidth = fontBold.widthOfTextAtSize(brand, 13);
     page.drawText(brand, {
       x: (pageWidth - brandWidth) / 2,
-      y: 520,
-      size: 14,
+      y: 498,
+      size: 13,
       font: fontBold,
       color: rgb(0.08, 0.38, 0.45)
     });
