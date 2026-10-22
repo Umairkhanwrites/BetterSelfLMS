@@ -5,8 +5,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import {
   signInWithCredentials,
-  registerStudent,
-  PRE_SEEDED_ACCOUNTS
+  registerStudent
 } from '@/lib/firebaseClient';
 import {
   Sparkles,
@@ -17,7 +16,6 @@ import {
   ShieldCheck,
   CheckCircle2,
   AlertCircle,
-  KeyRound,
   Phone
 } from 'lucide-react';
 import BrandLogo from '@/components/BrandLogo';
@@ -51,26 +49,6 @@ export default function LoginPage() {
       }
     } catch (err: any) {
       setErrorMsg(err.message || 'Authentication error');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleQuickFill = async (acc: typeof PRE_SEEDED_ACCOUNTS[0]) => {
-    setEmail(acc.email);
-    setPassword(acc.password);
-    setErrorMsg(null);
-    setLoading(true);
-
-    try {
-      const user = await signInWithCredentials(acc.email, acc.password);
-      if (user.admin) {
-        router.push('/admin');
-      } else {
-        router.push('/');
-      }
-    } catch (err: any) {
-      setErrorMsg(err.message);
     } finally {
       setLoading(false);
     }
@@ -204,45 +182,6 @@ export default function LoginPage() {
               )}
             </button>
           </form>
-
-          {/* Quick-Fill Credentials Card Section */}
-          <div className="pt-4 border-t border-slate-100 space-y-3">
-            <div className="flex items-center gap-1.5 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-              <KeyRound className="w-3.5 h-3.5 text-[#2988C6]" />
-              <span>Dedicated Test Accounts & Credentials:</span>
-            </div>
-
-            <div className="space-y-2">
-              {PRE_SEEDED_ACCOUNTS.map((acc, i) => (
-                <div
-                  key={i}
-                  className="p-3 rounded-xl border border-slate-200 bg-slate-50 hover:border-[#2988C6]/40 hover:bg-[#ddedf8]/20 transition-all text-xs"
-                >
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="font-bold text-slate-900">{acc.role}</span>
-                    <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
-                      acc.badge.includes('Admin')
-                        ? 'bg-[#fbf0e3] text-[#904e2b] border border-[#f6dec4]'
-                        : 'bg-[#ddedf8] text-[#206394] border border-[#c1e0f3]'
-                    }`}>
-                      {acc.badge}
-                    </span>
-                  </div>
-                  <p className="text-[11px] text-slate-500 mb-2">{acc.description}</p>
-                  <div className="flex items-center justify-between pt-1 border-t border-slate-200/60 font-mono text-[11px]">
-                    <span className="text-slate-600 truncate max-w-[170px]">{acc.email}</span>
-                    <button
-                      type="button"
-                      onClick={() => handleQuickFill(acc)}
-                      className="px-2.5 py-1 rounded-lg bg-[#66B151] text-white font-sans font-bold text-[10px] hover:bg-[#589c44] transition-colors"
-                    >
-                      Use & Log In
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
         <div className="text-center">

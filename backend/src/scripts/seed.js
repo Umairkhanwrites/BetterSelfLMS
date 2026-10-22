@@ -23,7 +23,7 @@ export const seedDatabase = async () => {
     totalDurationMinutes: 210,
     totalItems: 12, // Sum of all lessons + required quizzes across modules
     isPublished: true,
-    thumbnailUrl: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80',
     liveMeetLink: '',
     liveMeetSchedule: '',
     createdAt: new Date().toISOString(),
@@ -46,7 +46,7 @@ export const seedDatabase = async () => {
           type: 'video',
           durationMinutes: 12,
           isFreePreview: true, // Unlocked on public sales page & pending enrollments
-          youtubeVideoId: 'dQw4w9WgXcQ',
+          youtubeVideoId: 'wwsvR3TWKSA',
           summaryText: 'Core breakdown of cognitive, physical, and behavioral loops.',
           resources: [
             {
@@ -62,7 +62,7 @@ export const seedDatabase = async () => {
           type: 'video',
           durationMinutes: 18,
           isFreePreview: false,
-          youtubeVideoId: '9mS0_6Qc6oU',
+          youtubeVideoId: 'wwsvR3TWKSA',
           summaryText: 'Understanding how sympathetic arousal impairs rational prefrontal cortex control.',
           resources: [
             {
@@ -78,7 +78,7 @@ export const seedDatabase = async () => {
           type: 'video',
           durationMinutes: 15,
           isFreePreview: false,
-          youtubeVideoId: '2n7lJv9I5vI',
+          youtubeVideoId: 'wwsvR3TWKSA',
           summaryText: 'Techniques to detect subtle catastrophizing and mind reading before emotional flooding.',
           resources: [
             {
@@ -112,7 +112,7 @@ export const seedDatabase = async () => {
           type: 'video',
           durationMinutes: 20,
           isFreePreview: false,
-          youtubeVideoId: 'kJQP7kiw5Fk',
+          youtubeVideoId: 'wwsvR3TWKSA',
           summaryText: 'Deep dive into black-and-white thinking, fortune telling, and emotional reasoning.',
           resources: [
             {
@@ -128,7 +128,7 @@ export const seedDatabase = async () => {
           type: 'video',
           durationMinutes: 22,
           isFreePreview: false,
-          youtubeVideoId: 'kJQP7kiw5Fk',
+          youtubeVideoId: 'wwsvR3TWKSA',
           summaryText: 'Systematic inquiry to examine empirical evidence and worst/best/realistic case scenarios.',
           resources: [
             {
@@ -178,7 +178,7 @@ export const seedDatabase = async () => {
           type: 'video',
           durationMinutes: 16,
           isFreePreview: false,
-          youtubeVideoId: 'kJQP7kiw5Fk',
+          youtubeVideoId: 'wwsvR3TWKSA',
           summaryText: 'Neurobiological grounding tools to abort panic spikes within 90 seconds.',
           resources: [
             {
@@ -194,7 +194,7 @@ export const seedDatabase = async () => {
           type: 'video',
           durationMinutes: 25,
           isFreePreview: false,
-          youtubeVideoId: 'kJQP7kiw5Fk',
+          youtubeVideoId: 'wwsvR3TWKSA',
           summaryText: 'Step-by-step gradual exposure ladder using Subjective Units of Distress (SUDS).',
           resources: [
             {
@@ -210,7 +210,7 @@ export const seedDatabase = async () => {
           type: 'video',
           durationMinutes: 25,
           isFreePreview: false,
-          youtubeVideoId: 'kJQP7kiw5Fk',
+          youtubeVideoId: 'wwsvR3TWKSA',
           summaryText: 'Early warning signs, maintenance rituals, and psychoeducational resilience habits.',
           resources: [
             {
